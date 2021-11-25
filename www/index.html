@@ -17,6 +17,7 @@
 
     function fetchAll() {
       let TestDataClass = ncmb.DataStore(db);
+      TestDataClass.order("name" , false).fetchAll()
       TestDataClass.fetchAll()
         .then(function(results) {
           showResults(results);
